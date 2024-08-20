@@ -1,0 +1,212 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: rgb(195, 209, 171);
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(87, 132, 184);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Post container */
+.post {
+  background-color: blanchedalmond;
+  margin: 30px 100px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.post .user {
+  font-size: 1.2em;
+  color: #333;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.post .content {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Section containing links and buttons */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button a {
+  color: white;
+  text-decoration: none;
+}
+
+button.edit-btn {
+  background-color: #ffc107;
+}
+
+button.dlt-btn {
+  background-color: #dc3545;
+}
+
+button.crt-btn {
+  background-color: #28a745;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  color: black;
+  border-radius: 50px;
+  padding: 20px 38px;
+  margin-bottom: 50px;
+  width: 180px;
+  transition: 0.3s;
+}
+
+button.crt-btn a {
+  color: black;
+}
+
+button.crt-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Link styles */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Edit section */
+.edit-header {
+  margin-left: 90px;
+  color: maroon;
+  font-size: 24px;
+}
+
+.edit-info {
+  margin-left: 90px;
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 40px 80px 0 80px;
+}
+
+.edit-form textarea {
+  border: none;
+  width: 100%;
+  max-width: 700px;
+  height: 200px;
+  padding-left: 20px;
+  border-radius: 6px;
+  background: blanchedalmond;
+  color: #171212;
+  font-family: 'Outfit', sans-serif;
+  font-size: 20px;
+}
+
+.edit-form textarea:hover {
+  border: 1px solid #d8d8d8;
+}
+
+.edit-submit {
+  border: none;
+  color: black;
+  border-radius: 50px;
+  background: white;
+  font-size: 18px;
+  padding: 20px 38px;
+  margin-bottom: 50px;
+  cursor: pointer;
+  width: 180px;
+  transition: 0.3s;
+}
+
+.edit-submit:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .post {
+    margin: 30px 50px;
+  }
+
+  .edit-form {
+    margin: 40px 50px 0 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section a, .section button {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  button a {
+    display: block;
+    width: 100%;
+  }
+
+  .post {
+    margin: 30px 20px;
+  }
+
+  .edit-form {
+    margin: 40px 20px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post .user {
+    font-size: 1em;
+  }
+
+  .post .content {
+    font-size: 0.9em;
+  }
+
+  .edit-form textarea {
+    font-size: 18px;
+  }
+}
